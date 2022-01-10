@@ -19,7 +19,7 @@ app.use(express.json());
 app.set("view engine", "hbs");
 
 //app.use(userRoutes);
-app.use(authRoutes);
+app.use("/login",authRoutes);
 app.listen(port, () => {
   console.log("Port is listening on port no:" + port);
 });
