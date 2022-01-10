@@ -17,10 +17,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 //now let set up the view engine
 app.set("view engine", "hbs");
-//app.set("views", "./views/");
 
 //app.use(userRoutes);
-app.use("/login",authRoutes);
+app.use(authRoutes);
 app.listen(port, () => {
   console.log("Port is listening on port no:" + port);
 });

@@ -4,27 +4,29 @@ const authController = require("../controllers/authController");
 const { checkToken } = require("../middleware/token_validation");
 
 //login and then render home
-router.get("/", authController.login_get);
-router.post("/", authController.login_post);
+//login added
+router.get("/login", authController.login_get);
+//router login added
+router.post("/login", authController.login_post);
 //view all users
-router.get("/viewAllUsers",  authController.getAllUsersView_get);
+router.get("/login/viewAllUsers",  authController.getAllUsersView_get);
 
 //add user
-router.get("/adduser", authController.adduser_get);
-router.post("/adduser", authController.adduser_post);
+router.get("/login/adduser", authController.adduser_get);
+router.post("/login/adduser", authController.adduser_post);
 
 //edit
-router.get("/editUser/:id", authController.getUserByUserId_get);
+router.get("/login/editUser/:id", authController.getUserByUserId_get);
 //update
-router.post("/editUser/:id", authController.getUserByUserId_post);
+router.post("/login/editUser/:id", authController.getUserByUserId_post);
 
 //view user
-router.get("/viewuser/:id", authController.veiwuser_get);
+router.get("/login/viewuser/:id", authController.veiwuser_get);
 
 //add-no
-router.get("/view-user/add-no/:id", authController.addno_get);
-router.post("/view-user/add-no/:id", authController.addno_post);
-router.get("/view-user/calc-res/:id", authController.performOperations_get);
+router.get("/login/view-user/add-no/:id", authController.addno_get);
+router.post("/login/view-user/add-no/:id", authController.addno_post);
+router.get("/login/view-user/calc-res/:id", authController.performOperations_get);
 
 //delete
 router.delete("/:id", authController.deleteUserPermanent);
