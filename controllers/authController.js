@@ -154,26 +154,7 @@ module.exports.getUserByUserId_post = async (req, res) => {
   });
 };
 
-//deleteUser_delete request
-// module.exports.deleteUser_delete = (req, res) => {
-//   const id = req.params.id;
 
-//   deleteUser(id, (err, results) => {
-//     if (err) {
-//       console.log(err);
-//       return;
-//     }
-//     if (!results) {
-//       getUsers((err, results) => {
-//         if (err) {
-//           console.log(err);
-//           return;
-//         }
-//         res.render("home", { results });
-//       });
-//     }
-//   });
-// };
 
 //view users done
 module.exports.veiwuser_get = (req, res) => {
